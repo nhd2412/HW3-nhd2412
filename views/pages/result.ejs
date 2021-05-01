@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+                                                                                                <!--This is the result page which show all the information of the language which user chose from the index page-->
+<main>
+    <h2>Thank you for submitting the form</h2>
+    <h4>Below is the detail information of language :</h4>
+    Language: <%=language.name %>                                                                           <!--This is show language name in the list-->
+    <br>                                                                          
+    Market Share Percents : <%= language.marketSharePercent %>                                                   <!--This is show Market Share Percents in the list-->
+    <br>
+    Created At : <%= language.createdAt %>                                                                  <!--This is show Created At in the list-->
+    <br>
+    Created By : <%= language.createdBy %>                                                                  <!--This is show Created By in the list-->
+    <br>
+    Typing Disciplines : <%= language.typingDisciplines %>                                                     <!--This is show Typing Disciplines in the list-->
+    <br>
+
+    <a href="/" class="button" >Click here to return to Home Page</a>                                           <!--I create this button that allow user to go back to the home page to pick other language-->
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

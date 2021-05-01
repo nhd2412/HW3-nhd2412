@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>                                                          <!--This is head of the page--> 
+</head>
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+        
+    </header>
+<form action="/" method="post">
+    <main>
+
+        <label for="name">Select Name:</label>                                                  <!--This is label for drop down menu-->
+        <select id="name" name="id">
+          <option value= "a">Choose a programming Language</option>                             <!--This is name of menu show where user need to click to show all the language-->
+          <% for (i in x) {%>                                                                       
+          
+            <option value="<%= x[i].id %> "><%= x[i].name %></option>                            <!--This is to create option of the list that show name of all the language user need to picl-->       
+          
+
+            <% } %> 
+            
+        </select>
+        <button type="submit">Select</button>                                                       <!--This is to create submit button -->
+
+    </main>
+</form>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+</html>
+
+
